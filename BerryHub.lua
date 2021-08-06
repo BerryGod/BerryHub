@@ -79,90 +79,51 @@ b:DestroyGui()
 end
 
 -- Bedwars
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AikaV3rm/UiLib/master/Lib.lua')))()
 
+local w = library:CreateWindow("A") -- Creates the window
 
-if game.PlaceId == 6872265039 then
+local b = w:CreateFolder("B") -- Creates the folder(U will put here your buttons,etc)
+
+b:Label("Pretty Useless NGL",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
     
-    local VLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vep1032/VepStuff/main/VL"))()
+}) 
 
-local s = VLib:Window("BERRY HUB", "BedWars", "G")
-
-local ss = s:Tab("Tab 1")
-
-ss:Button("Buy Wool",function(qua)
-        getgenv().autoTap = bool
-    if bool then
-        buyWool();
-        end
+b:Button("Button",function()
+    print("Elym Winning")
 end)
 
-
-ss:Toggle("Insta Break",function(bool)
-    getgenv().InstaBreak = bool
-    if bool then
-        buyWool();
-        end
-    end)
-
-
-ss:Slider("Speed",0,100,70,function(speed)
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speed
+b:Toggle("Toggle",function(bool)
+    shared.toggle = bool
+    print(shared.toggle)
 end)
 
-
-ss:Dropdown("Dropdown",{"Option 1", "Option 2", "Option 3", "Option 4", "Option 5"},function(t)
-print(t)
-end)
-   
-   
-ss:Colorpicker("Colorpicker",Color3.fromRGB(255, 1, 1),function(t)
-print(t)
-    end)
-
-ss:Textbox("Textbox", true,function(t)
-print(t)
+b:Slider("Slider",{
+    min = 10; -- min value of the slider
+    max = 50; -- max value of the slider
+    precise = true; -- max 2 decimals
+},function(value)
+    print(value)
 end)
 
-ss:Label("Label")
-s:Tab("Misc")
-
-
-
-
-
-
-getgenv().InstaBreak = bool
-getgenv().autoTap = bool
-
- function buyWool()
-    spawn(function()
-    while getgenv().buyWool == true do
-
-local args = {
-    [1] = {
-        ["shopItem"] = {
-            ["price"] = 8,
-            ["currency"] = "iron",
-            ["itemType"] = "wool_white",
-            ["amount"] = 16
-        }
-    }
-}
-
-game:GetService("ReplicatedStorage").rbxts_include.node_modules.net.out._NetManaged.BedwarsPurchaseItem:InvokeServer(unpack(args))
-end
+b:Dropdown("Dropdown",{"A","B","C"},true,function(mob) --true/false, replaces the current title "Dropdown" with the option that t
+    print(mob)
 end)
- end
- 
-function InstaBreak()
-    spawn(function()
-    while getgenv().InstaBreak == true do
-while wait() do
-    for i,v in pairs(workspace.Map.Blocks:GetChildren()) do
-        v:SetAttribute("Health",0)
-    end
-end
-end
+
+b:Bind("Bind",Enum.KeyCode.C,function() --Default bind
+    print("Yes")
 end)
-end
+
+b:ColorPicker("ColorPicker",Color3.fromRGB(255,0,0),function(color) --Default color
+    print(color)
+end)
+
+b:Box("Box","number",function(value) -- "number" or "string"
+    print(value)
+end)
+
+b:DestroyGui()
 end
