@@ -121,7 +121,7 @@ b:Label("Wait 10 sec",{
 
 
 
-b:Slider("Slider",{
+b:Slider("Jump Power",{
     min = 50; -- min value of the slider
     max = 300; -- max value of the slider
     precise = true; -- max 2 decimals
@@ -129,7 +129,7 @@ b:Slider("Slider",{
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = (value)
 end)
 
-b:Slider("Slider",{
+b:Slider("Speed",{
     min = 50; -- min value of the slider
     max = 300; -- max value of the slider
     precise = true; -- max 2 decimals
