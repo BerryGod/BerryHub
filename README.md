@@ -10,4 +10,4 @@ And BerryHub's developer team releasing new script every WEEK!
 Developer Team:
 
 ㅤㅤㅤㅤㅤㅤㅤㅤBerryGodㅤㅤㅤㅤㅤㅤㅤㅤBeiel2ㅤㅤㅤㅤㅤㅤㅤㅤㅤHuiqscㅤㅤㅤㅤㅤㅤMelonK1ngㅤㅤㅤㅤㅤㅤStrongPostal
-							 OWNERㅤㅤㅤㅤㅤㅤㅤㅤㅤ Main DEVㅤㅤㅤㅤㅤㅤㅤㅤDEVㅤㅤㅤㅤㅤㅤㅤㅤㅤDEVㅤㅤㅤㅤㅤㅤㅤㅤTrainee DEV
+ㅤㅤㅤㅤㅤㅤㅤㅤㅤ OWNERㅤㅤㅤㅤㅤㅤㅤㅤㅤ Main DEVㅤㅤㅤㅤㅤㅤㅤㅤDEVㅤㅤㅤㅤㅤㅤㅤㅤㅤDEVㅤㅤㅤㅤㅤㅤㅤㅤTrainee DEV
