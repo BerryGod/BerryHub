@@ -34,27 +34,18 @@ game:GetService("ReplicatedStorage").SpecWork.Shared.Network.Exchange:FireServer
 
 end)
 
-b:Toggle("Toggle",function(bool)
+b:Toggle("Not working RN",function(bool)
     shared.toggle = bool
-    if bool then 
-        local args = {
-    [1] = "Exchange",
-    [2] = {
-        ["Rate"] = 247
-    }
-}
-
-game:GetService("ReplicatedStorage").SpecWork.Shared.Network.Exchange:FireServer(unpack(args))
-end
+    AutoSellD = bool
 end)
     
-    
-    g:Slider("Sell Settings",{
+g:Slider("Sell Settings",{
     min = 10; -- min value of the slider
     max = 200; -- max value of the slider
     precise = true; -- max 2 decimals
-},function(Rater)
+},function(rutu)
 end)
+ 
 
 g:Slider("WalkSpeed",{
     min = 10; -- min value of the slider
@@ -75,6 +66,16 @@ g:Slider("JumpPower",{
 end)
 
 
+
+g:Slider("JumpPower",{
+    min = 10; -- min value of the slider
+    max = 200; -- max value of the slider
+    precise = true; -- max 2 decimals
+},function(rutu)
+   
+end)
+
+
 b:Dropdown("Dropdown",{"A","B","C"},true,function(mob) --true/false, replaces the current title "Dropdown" with the option that t
     print(mob)
 end)
@@ -85,6 +86,22 @@ end)
 
 b:DestroyGui()
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 --TOH
 
@@ -175,7 +192,7 @@ end)
 
 
 b:Button("5x LUCK",function()
-    print("Get scammed boyz")
+    setclipboard("https://discord.gg/6JFRvbQWzF")
 end)
 
 b:Button("Hoops Farm",function()
@@ -195,11 +212,16 @@ if game.PlaceId == 6284583030 then
 
 local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AikaV3rm/UiLib/master/Lib.lua')))()
 
-local w = library:CreateWindow("BerryHub") -- Creates the window
+local w = library:CreateWindow("A") -- Creates the window
 
-local b = w:CreateFolder("Pet Sim X") -- Creates the folder(U will put here your buttons,etc)
+local b = w:CreateFolder("B") -- Creates the folder(U will put here your buttons,etc)
 
-
+b:Label("Pretty Useless NGL",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+    
+}) 
 
 b:Button("Unlock All Gamepass",function()
     local gmppath = require(game:GetService("ReplicatedStorage").Framework.Modules.Client["5 | Gamepasses"])
