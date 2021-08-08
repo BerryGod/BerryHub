@@ -190,3 +190,55 @@ end)
 
 b:DestroyGui()
 end
+
+if game.PlaceId == 6284583030 then
+
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AikaV3rm/UiLib/master/Lib.lua')))()
+
+local w = library:CreateWindow("A") -- Creates the window
+
+local b = w:CreateFolder("B") -- Creates the folder(U will put here your buttons,etc)
+
+b:Label("Pretty Useless NGL",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+    
+}) 
+
+b:Button("Unlock All Gamepass",function()
+    local gmppath = require(game:GetService("ReplicatedStorage").Framework.Modules.Client["5 | Gamepasses"])
+gmppath.Owns = function() return true end
+end)
+
+b:Toggle("Toggle",function(bool)
+    shared.toggle = bool
+    AutoFarm = bool
+end)
+
+
+b:Slider("Slider",{
+    min = 50; -- min value of the slider
+    max = 500; -- max value of the slider
+    precise = true; -- max 2 decimals
+},function(value)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (value)
+end)
+
+
+
+
+
+
+
+b:DestroyGui()
+end
+
+spawn(function()
+    if AutoFarm == true then
+        getgenv().speed=150
+
+for i,v in pairs(getconnections(game.Players.LocalPlayer.Idled)) do v:Disable() 
+end
+end
+end)
